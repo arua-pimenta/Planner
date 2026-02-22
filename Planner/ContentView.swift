@@ -1,124 +1,168 @@
 import SwiftUI
+import SwiftData
 
-struct ContentView: View {
-    @EnvironmentObject var app: AppState
-    @State private var selectedTab: Tab = .timetable
-    @State private var moveFromEdge: Edge = .trailing
-    @State private var previousTab: Tab = .timetable
+struct GlobalSearchTextKey: EnvironmentKey {
+    static let defaultValue: String = ""
+}
 
-    enum Tab: Int, Hashable { case timetable = 0, calendar, todo, courses, add }
+extension EnvironmentValues {
+    var globalSearchText: String {
+        get { self[GlobalSearchTextKey.self] }
+        set { self[GlobalSearchTextKey.self] = newValue }
+    }
+}
 
+
+struct MainTabView: View {
+    @Environment(\.modelContext) private var modelContext
+    @Query(sort: \Semestre.dataInicio) private var semestres: [Semestre]
+    @AppStorage("semestreAtivoGlobalId") private var semestreAtivoGlobalId = ""
+    @AppStorage("hasCompletedOnboarding") private var hasCompletedOnboarding = false
+    
+    @State private var selectedModule: AppModule? = .painel
+    @State private var searchText: String = ""
+    @State private var showOnboarding = false
+    
     var body: some View {
-        ZStack(alignment: .bottom) {
-            Color.black.ignoresSafeArea()
-
-            ZStack {
-                if selectedTab == .timetable {
-                    TimetableView()
-                        .transition(transitionForCurrentTab())
-                }
-                if selectedTab == .calendar {
-                    CalendarView()
-                        .transition(transitionForCurrentTab())
-                }
-                if selectedTab == .courses {
-                    CoursesView()
-                        .transition(transitionForCurrentTab())
-                }
-                if selectedTab == .todo {
-                    TodoView()
-                        .transition(transitionForCurrentTab())
-                }
-                if selectedTab == .add {
-                    Color.clear
-                }
+        NavigationSplitView {
+            SidebarView(selectedModule: $selectedModule)
+                .navigationSplitViewColumnWidth(min: 220, ideal: 220, max: 280)
+        } content: {
+            if let selectedModule = selectedModule {
+                moduleContent(for: selectedModule)
+                    .navigationSplitViewColumnWidth(min: 400, ideal: 600)
+            } else {
+                Text("Selecione um módulo")
+                    .foregroundColor(.secondary)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
-
-            // Custom bottom navigator (image 3 style)
-            HStack(spacing: 28) {
-                Button { switchTab(.timetable) } label: {
-                    Image(systemName: "clock")
-                        .font(.system(size: 18, weight: .semibold))
-                        .foregroundColor(selectedTab == .timetable ? .white : .gray)
-                }
-
-                Button { switchTab(.calendar) } label: {
-                    Image(systemName: "calendar")
-                        .font(.system(size: 18, weight: .semibold))
-                        .foregroundColor(selectedTab == .calendar ? .white : .gray)
-                }
-
-                ZStack {
-                    Circle()
-                        .fill(Color.white)
-                        .frame(width: 56, height: 56)
-                        .overlay(
-                            Circle().stroke(Color.black, lineWidth: 4)
-                        )
-                        .offset(y: -12)
-                    Button {
-                        let impact = UIImpactFeedbackGenerator(style: .medium)
-                        impact.impactOccurred()
-                        app.showAddSheet = true
-                    } label: {
-                        Image(systemName: "plus")
-                            .font(.system(size: 22, weight: .bold))
-                            .foregroundColor(.black)
+        } detail: {
+            Text("Detalhes")
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+        }
+        .searchable(text: $searchText, placement: .toolbar, prompt: "Busca Global...")
+        .environment(\.globalSearchText, searchText)
+        .toolbar {
+            ToolbarItem(placement: .primaryAction) {
+                if !semestres.isEmpty {
+                    Picker("Semestre", selection: $semestreAtivoGlobalId) {
+                        Text("Geral").tag("") // Opção caso queira ver tudo ou nenhum
+                        ForEach(semestres) { semestre in
+                            Text(semestre.nome).tag(semestre.id.uuidString)
+                        }
                     }
-                    .offset(y: -12)
-                }
-
-                Button { switchTab(.todo) } label: {
-                    Image(systemName: "checkmark.circle")
-                        .font(.system(size: 18, weight: .semibold))
-                        .foregroundColor(selectedTab == .todo ? .white : .gray)
-                }
-
-                Button { switchTab(.courses) } label: {
-                    Image(systemName: "books.vertical")
-                        .font(.system(size: 18, weight: .semibold))
-                        .foregroundColor(selectedTab == .courses ? .white : .gray)
+                    .pickerStyle(.menu)
+                    .frame(minWidth: 120)
                 }
             }
-            .padding(.horizontal, 22)
-            .padding(.top, 8)
-            .padding(.bottom, 16)
-            .frame(height: 72)
-            .frame(maxWidth: .infinity)
-            .background(
-                RoundedRectangle(cornerRadius: 24)
-                    .fill(Color.black)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 24)
-                            .stroke(Color.white.opacity(0.08), lineWidth: 1)
-                    )
-            )
-            .padding(.horizontal, 16)
-            .shadow(color: .black.opacity(0.6), radius: 12, x: 0, y: -2)
         }
-        .sheet(isPresented: $app.showAddSheet) {
-            AddSheet()
-                .presentationDetents([.medium, .large])
-                .presentationBackground(.ultraThinMaterial)
+        .onAppear {
+            NotificationManager.shared.requestAuthorization()
+            if !hasCompletedOnboarding {
+                showOnboarding = true
+            }
+        }
+        .sheet(isPresented: $showOnboarding) {
+            OnboardingView(hasCompletedOnboarding: $hasCompletedOnboarding)
+                .interactiveDismissDisabled(true)
         }
     }
     
-    private func switchTab(_ tab: Tab) {
-        guard tab != selectedTab else { return }
-        if tab != .add {
-            moveFromEdge = tab.rawValue > selectedTab.rawValue ? .trailing : .leading
+    @ViewBuilder
+    private func moduleContent(for module: AppModule) -> some View {
+        switch module {
+        case .painel:
+            PainelView()
+        case .horario:
+            Text("Horário Semanal")
+        case .agenda:
+            AgendaView()
+        case .tarefas:
+            TarefasView()
+        case .semestres:
+            SemestresView()
+        case .disciplinas:
+            DisciplinasView()
+        case .presenca:
+            FaltasView()
+        case .caderno:
+            AnotacoesView()
+        case .boletim:
+            BoletimView()
+        case .professores:
+            ProfessoresView()
+        case .feriados:
+            FeriadosView()
+        case .configuracoes:
+            ConfiguracoesView()
         }
-        withAnimation(.spring(response: 0.45, dampingFraction: 0.85, blendDuration: 0.15)) {
-            selectedTab = tab
+    }
+}
+
+enum AppModule: String, CaseIterable, Identifiable {
+    case painel = "Painel"
+    case horario = "Horário"
+    case agenda = "Agenda"
+    case tarefas = "Tarefas"
+    case semestres = "Semestres"
+    case disciplinas = "Disciplinas"
+    case presenca = "Presença"
+    case caderno = "Caderno"
+    case boletim = "Boletim"
+    case professores = "Professores"
+    case feriados = "Feriados"
+    case configuracoes = "Configurações"
+    
+    var id: String { self.rawValue }
+    
+    var icon: String {
+        switch self {
+        case .painel: return "square.grid.2x2"
+        case .horario: return "calendar.day.timeline.left"
+        case .agenda: return "calendar"
+        case .tarefas: return "checklist"
+        case .semestres: return "rectangle.stack.badge.play"
+        case .disciplinas: return "books.vertical"
+        case .presenca: return "person.crop.circle.badge.checkmark"
+        case .caderno: return "book.closed"
+        case .boletim: return "graduationcap"
+        case .professores: return "person.2"
+        case .feriados: return "calendar.badge.clock"
+        case .configuracoes: return "gear"
         }
-        let impact = UIImpactFeedbackGenerator(style: .light)
-        impact.impactOccurred()
     }
     
-    private func transitionForCurrentTab() -> AnyTransition {
-        .asymmetric(
-            insertion: .move(edge: moveFromEdge).combined(with: .opacity),
-            removal: .move(edge: moveFromEdge == .leading ? .trailing : .leading).combined(with: .opacity)
-        )
+    var color: Color {
+        switch self {
+        case .painel: return .blue
+        case .horario: return .orange
+        case .agenda: return .red
+        case .tarefas: return .green
+        case .semestres: return .mint
+        case .disciplinas: return .purple
+        case .presenca: return .teal
+        case .caderno: return .yellow
+        case .boletim: return .indigo
+        case .professores: return .cyan
+        case .feriados: return .pink
+        case .configuracoes: return .gray
+        }
+    }
+    
+    var shortcutKey: KeyEquivalent? {
+        switch self {
+        case .painel: return "1"
+        case .horario: return "2"
+        case .agenda: return "3"
+        case .tarefas: return "4"
+        case .semestres: return "5"
+        case .disciplinas: return "6"
+        case .presenca: return "7"
+        case .caderno: return "8"
+        case .boletim: return "9"
+        case .professores: return "0"
+        case .feriados: return "-"
+        case .configuracoes: return ","
+        }
     }
 }

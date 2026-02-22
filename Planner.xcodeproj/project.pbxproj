@@ -6,6 +6,32 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		0F2F1239F3C0261730545003 /* Tarefa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075E82825F876FF0769C585B /* Tarefa.swift */; };
+		2923F26C4B6E794B8D60D675 /* AnotacaoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC484BC4713AB3064E52A350 /* AnotacaoDetailView.swift */; };
+		320564C5ED82042C8EC0F5FC /* BoletimView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B60E9031916936D42A79691 /* BoletimView.swift */; };
+		3EACBCAEFEAFDE76D831D476 /* Anotacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDB46CE26371B4CC21AB5ED /* Anotacao.swift */; };
+		41BC74CE80DA7F8373B2CF0B /* NovoProfessorSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505EF7C3293051C310DD227B /* NovoProfessorSheet.swift */; };
+		5330E5E0C4AD72D508B8CA65 /* Professor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F2BF2D8F9375DB7CC3A742 /* Professor.swift */; };
+		63BE184DD1EBA0389C9F6C6E /* PainelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42123248CFAE2AB9851DE1EC /* PainelView.swift */; };
+		6CEE88CDE3EC325772DA668A /* Prova.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADA2C6D76D4E5C9108FBDB4 /* Prova.swift */; };
+		720D4F5F798032D1C2A531BA /* Feriado.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070DFA0B491A6B895E2D6BE9 /* Feriado.swift */; };
+		86C992A1567A6F39D4692017 /* FeriadosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE17F2F106D2D4C100F7E31 /* FeriadosView.swift */; };
+		86F061AE650D975A6453E620 /* NovaAvaliacaoSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD018885224876F097A3775 /* NovaAvaliacaoSheet.swift */; };
+		887B70656BA3933E58D7AC74 /* ProvaRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662F9C104D3AF3E721A0F061 /* ProvaRow.swift */; };
+		895CF0239910545DB16DFD97 /* ProfessoresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DB34AA8101FACD9A286AAC /* ProfessoresView.swift */; };
+		8A03C4E8FB91B55977038517 /* NovaTarefaSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E0A06EBBFC993A5A418CFB /* NovaTarefaSheet.swift */; };
+		971A5BF211F4DDA73ED9BC86 /* FaltasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C320071F8B080C7A7F10C8 /* FaltasView.swift */; };
+		CC8771821CC3F0D3BE024961 /* TarefasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B39C3D026F689B73AC4FED /* TarefasView.swift */; };
+		D98A3B6DDB8F5E61F35073E4 /* Avaliacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BC3781D154F2CFD2CDD271 /* Avaliacao.swift */; };
+		E7B661D14618AEA60D4E6799 /* NovoFeriadoSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52053812C29CBBD6B9286FA4 /* NovoFeriadoSheet.swift */; };
+		EB4CB35930C8483D36DC543F /* AnotacoesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EFA150E3C0FB589F03AE0B /* AnotacoesView.swift */; };
+		F33C2CF6509E1D401B5F6FE4 /* TarefaRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8C0023B9EE38F195EC4336 /* TarefaRow.swift */; };
+		F4DCD90E710EABA9DA2D0347 /* Falta.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C5CAEE86E647F8F54614A3 /* Falta.swift */; };
+		FDAC4D17910CBAE0E3669DE1 /* NovaAnotacaoSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E49FE5DB17E107C719C2A5 /* NovaAnotacaoSheet.swift */; };
+		FF1B107B51A89BECA45F0C3A /* NovaFaltaSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3053982E3A1F63BC1765D84 /* NovaFaltaSheet.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		437D346F2E5CAE3B00D9F4FE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,14 +50,57 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05DB34AA8101FACD9A286AAC /* ProfessoresView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfessoresView.swift; sourceTree = "<group>"; };
+		06B39C3D026F689B73AC4FED /* TarefasView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TarefasView.swift; path = Planner/Views/Tarefas/TarefasView.swift; sourceTree = SOURCE_ROOT; };
+		070DFA0B491A6B895E2D6BE9 /* Feriado.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Feriado.swift; sourceTree = "<group>"; };
+		075E82825F876FF0769C585B /* Tarefa.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Tarefa.swift; path = Planner/Models/Tarefa.swift; sourceTree = SOURCE_ROOT; };
+		1E4AFB18D4F0354935567601 /* AgendaView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AgendaView.swift; path = Planner/Views/Agenda/AgendaView.swift; sourceTree = SOURCE_ROOT; };
+		29C320071F8B080C7A7F10C8 /* FaltasView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FaltasView.swift; path = Planner/Views/Presenca/FaltasView.swift; sourceTree = SOURCE_ROOT; };
+		42123248CFAE2AB9851DE1EC /* PainelView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PainelView.swift; sourceTree = "<group>"; };
 		437D34612E5CAE3A00D9F4FE /* Planner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Planner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		437D346E2E5CAE3B00D9F4FE /* PlannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		437D34782E5CAE3B00D9F4FE /* PlannerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlannerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B60E9031916936D42A79691 /* BoletimView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BoletimView.swift; path = Planner/Views/Boletim/BoletimView.swift; sourceTree = SOURCE_ROOT; };
+		505EF7C3293051C310DD227B /* NovoProfessorSheet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NovoProfessorSheet.swift; sourceTree = "<group>"; };
+		52053812C29CBBD6B9286FA4 /* NovoFeriadoSheet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NovoFeriadoSheet.swift; sourceTree = "<group>"; };
+		54EFA150E3C0FB589F03AE0B /* AnotacoesView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnotacoesView.swift; path = Planner/Views/Anotacoes/AnotacoesView.swift; sourceTree = SOURCE_ROOT; };
+		54F2BF2D8F9375DB7CC3A742 /* Professor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Professor.swift; sourceTree = "<group>"; };
+		662F9C104D3AF3E721A0F061 /* ProvaRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProvaRow.swift; path = Planner/Views/Tarefas/ProvaRow.swift; sourceTree = SOURCE_ROOT; };
+		6CD018885224876F097A3775 /* NovaAvaliacaoSheet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NovaAvaliacaoSheet.swift; path = Planner/Views/Boletim/NovaAvaliacaoSheet.swift; sourceTree = SOURCE_ROOT; };
+		8ADA2C6D76D4E5C9108FBDB4 /* Prova.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Prova.swift; path = Planner/Models/Prova.swift; sourceTree = SOURCE_ROOT; };
+		93EDE9DDB9E54E066E6027B6 /* NotificationManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NotificationManager.swift; path = Planner/Managers/NotificationManager.swift; sourceTree = SOURCE_ROOT; };
+		ABE17F2F106D2D4C100F7E31 /* FeriadosView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeriadosView.swift; sourceTree = "<group>"; };
+		B3C5CAEE86E647F8F54614A3 /* Falta.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Falta.swift; path = Planner/Models/Falta.swift; sourceTree = SOURCE_ROOT; };
+		BF8C0023B9EE38F195EC4336 /* TarefaRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TarefaRow.swift; path = Planner/Views/Tarefas/TarefaRow.swift; sourceTree = SOURCE_ROOT; };
+		C1E49FE5DB17E107C719C2A5 /* NovaAnotacaoSheet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NovaAnotacaoSheet.swift; path = Planner/Views/Anotacoes/NovaAnotacaoSheet.swift; sourceTree = SOURCE_ROOT; };
+		C3053982E3A1F63BC1765D84 /* NovaFaltaSheet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NovaFaltaSheet.swift; path = Planner/Views/Presenca/NovaFaltaSheet.swift; sourceTree = SOURCE_ROOT; };
+		D7E0A06EBBFC993A5A418CFB /* NovaTarefaSheet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NovaTarefaSheet.swift; path = Planner/Views/Tarefas/NovaTarefaSheet.swift; sourceTree = SOURCE_ROOT; };
+		D8BC3781D154F2CFD2CDD271 /* Avaliacao.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Avaliacao.swift; path = Planner/Models/Avaliacao.swift; sourceTree = SOURCE_ROOT; };
+		EBDB46CE26371B4CC21AB5ED /* Anotacao.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Anotacao.swift; path = Planner/Models/Anotacao.swift; sourceTree = SOURCE_ROOT; };
+		EC484BC4713AB3064E52A350 /* AnotacaoDetailView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnotacaoDetailView.swift; path = Planner/Views/Anotacoes/AnotacaoDetailView.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		DEADF8052F4A003800A071AD /* Exceptions for "Planner" folder in "Planner" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Models/Prova.swift,
+				Models/Tarefa.swift,
+				Views/Tarefas/NovaTarefaSheet.swift,
+				Views/Tarefas/ProvaRow.swift,
+				Views/Tarefas/TarefaRow.swift,
+				Views/Tarefas/TarefasView.swift,
+			);
+			target = 437D34602E5CAE3A00D9F4FE /* Planner */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		437D34632E5CAE3A00D9F4FE /* Planner */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				DEADF8052F4A003800A071AD /* Exceptions for "Planner" folder in "Planner" target */,
+			);
 			path = Planner;
 			sourceTree = "<group>";
 		};
@@ -72,6 +141,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A2F6BE33C34DF111C4BBC2F /* Agenda */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Agenda;
+			sourceTree = "<group>";
+		};
+		2C1CE3F38FAAEF9E95C903A7 /* Planner */ = {
+			isa = PBXGroup;
+			children = (
+				C7CFF0910EEA735DFD1D453A /* Models */,
+				4F34E3BE12354310C1DFD3DF /* Views */,
+			);
+			path = Planner;
+			sourceTree = "<group>";
+		};
+		2D8BE7E7536E807ACCFE9DA5 /* Professores */ = {
+			isa = PBXGroup;
+			children = (
+				05DB34AA8101FACD9A286AAC /* ProfessoresView.swift */,
+				505EF7C3293051C310DD227B /* NovoProfessorSheet.swift */,
+			);
+			path = Professores;
+			sourceTree = "<group>";
+		};
 		437D34582E5CAE3A00D9F4FE = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +173,28 @@
 				437D34712E5CAE3B00D9F4FE /* PlannerTests */,
 				437D347B2E5CAE3B00D9F4FE /* PlannerUITests */,
 				437D34622E5CAE3A00D9F4FE /* Products */,
+				A87F79FF9A08A87CCE3F0816 /* Models */,
+				7F9E846270EBD74E10D2887E /* Views */,
+				6FA875DD2AA470F34D4BBA06 /* Managers */,
+				075E82825F876FF0769C585B /* Tarefa.swift */,
+				8ADA2C6D76D4E5C9108FBDB4 /* Prova.swift */,
+				06B39C3D026F689B73AC4FED /* TarefasView.swift */,
+				BF8C0023B9EE38F195EC4336 /* TarefaRow.swift */,
+				D7E0A06EBBFC993A5A418CFB /* NovaTarefaSheet.swift */,
+				662F9C104D3AF3E721A0F061 /* ProvaRow.swift */,
+				93EDE9DDB9E54E066E6027B6 /* NotificationManager.swift */,
+				1E4AFB18D4F0354935567601 /* AgendaView.swift */,
+				B3C5CAEE86E647F8F54614A3 /* Falta.swift */,
+				EBDB46CE26371B4CC21AB5ED /* Anotacao.swift */,
+				29C320071F8B080C7A7F10C8 /* FaltasView.swift */,
+				C3053982E3A1F63BC1765D84 /* NovaFaltaSheet.swift */,
+				54EFA150E3C0FB589F03AE0B /* AnotacoesView.swift */,
+				C1E49FE5DB17E107C719C2A5 /* NovaAnotacaoSheet.swift */,
+				EC484BC4713AB3064E52A350 /* AnotacaoDetailView.swift */,
+				D8BC3781D154F2CFD2CDD271 /* Avaliacao.swift */,
+				4B60E9031916936D42A79691 /* BoletimView.swift */,
+				6CD018885224876F097A3775 /* NovaAvaliacaoSheet.swift */,
+				2C1CE3F38FAAEF9E95C903A7 /* Planner */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,6 +206,72 @@
 				437D34782E5CAE3B00D9F4FE /* PlannerUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		4F34E3BE12354310C1DFD3DF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2D8BE7E7536E807ACCFE9DA5 /* Professores */,
+				FE56E79B00FCD41F3521C593 /* Agenda */,
+				60942FCE873D9E72ED81CFE1 /* Painel */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		60942FCE873D9E72ED81CFE1 /* Painel */ = {
+			isa = PBXGroup;
+			children = (
+				42123248CFAE2AB9851DE1EC /* PainelView.swift */,
+			);
+			path = Painel;
+			sourceTree = "<group>";
+		};
+		6FA875DD2AA470F34D4BBA06 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		7F9E846270EBD74E10D2887E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				95C264F2235C336EBB161B90 /* Tarefas */,
+				1A2F6BE33C34DF111C4BBC2F /* Agenda */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		95C264F2235C336EBB161B90 /* Tarefas */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tarefas;
+			sourceTree = "<group>";
+		};
+		A87F79FF9A08A87CCE3F0816 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C7CFF0910EEA735DFD1D453A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				54F2BF2D8F9375DB7CC3A742 /* Professor.swift */,
+				070DFA0B491A6B895E2D6BE9 /* Feriado.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FE56E79B00FCD41F3521C593 /* Agenda */ = {
+			isa = PBXGroup;
+			children = (
+				ABE17F2F106D2D4C100F7E31 /* FeriadosView.swift */,
+				52053812C29CBBD6B9286FA4 /* NovoFeriadoSheet.swift */,
+			);
+			path = Agenda;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -111,8 +293,6 @@
 				437D34632E5CAE3A00D9F4FE /* Planner */,
 			);
 			name = Planner;
-			packageProductDependencies = (
-			);
 			productName = Planner;
 			productReference = 437D34612E5CAE3A00D9F4FE /* Planner.app */;
 			productType = "com.apple.product-type.application";
@@ -134,8 +314,6 @@
 				437D34712E5CAE3B00D9F4FE /* PlannerTests */,
 			);
 			name = PlannerTests;
-			packageProductDependencies = (
-			);
 			productName = PlannerTests;
 			productReference = 437D346E2E5CAE3B00D9F4FE /* PlannerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -157,8 +335,6 @@
 				437D347B2E5CAE3B00D9F4FE /* PlannerUITests */,
 			);
 			name = PlannerUITests;
-			packageProductDependencies = (
-			);
 			productName = PlannerUITests;
 			productReference = 437D34782E5CAE3B00D9F4FE /* PlannerUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -171,7 +347,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1640;
-				LastUpgradeCheck = 1640;
+				LastUpgradeCheck = 2630;
 				TargetAttributes = {
 					437D34602E5CAE3A00D9F4FE = {
 						CreatedOnToolsVersion = 16.4;
@@ -236,6 +412,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F2F1239F3C0261730545003 /* Tarefa.swift in Sources */,
+				6CEE88CDE3EC325772DA668A /* Prova.swift in Sources */,
+				CC8771821CC3F0D3BE024961 /* TarefasView.swift in Sources */,
+				F33C2CF6509E1D401B5F6FE4 /* TarefaRow.swift in Sources */,
+				8A03C4E8FB91B55977038517 /* NovaTarefaSheet.swift in Sources */,
+				887B70656BA3933E58D7AC74 /* ProvaRow.swift in Sources */,
+				F4DCD90E710EABA9DA2D0347 /* Falta.swift in Sources */,
+				3EACBCAEFEAFDE76D831D476 /* Anotacao.swift in Sources */,
+				971A5BF211F4DDA73ED9BC86 /* FaltasView.swift in Sources */,
+				FF1B107B51A89BECA45F0C3A /* NovaFaltaSheet.swift in Sources */,
+				EB4CB35930C8483D36DC543F /* AnotacoesView.swift in Sources */,
+				FDAC4D17910CBAE0E3669DE1 /* NovaAnotacaoSheet.swift in Sources */,
+				2923F26C4B6E794B8D60D675 /* AnotacaoDetailView.swift in Sources */,
+				D98A3B6DDB8F5E61F35073E4 /* Avaliacao.swift in Sources */,
+				320564C5ED82042C8EC0F5FC /* BoletimView.swift in Sources */,
+				86F061AE650D975A6453E620 /* NovaAvaliacaoSheet.swift in Sources */,
+				5330E5E0C4AD72D508B8CA65 /* Professor.swift in Sources */,
+				720D4F5F798032D1C2A531BA /* Feriado.swift in Sources */,
+				895CF0239910545DB16DFD97 /* ProfessoresView.swift in Sources */,
+				41BC74CE80DA7F8373B2CF0B /* NovoProfessorSheet.swift in Sources */,
+				86C992A1567A6F39D4692017 /* FeriadosView.swift in Sources */,
+				E7B661D14618AEA60D4E6799 /* NovoFeriadoSheet.swift in Sources */,
+				63BE184DD1EBA0389C9F6C6E /* PainelView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,8 +502,9 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = NAYF92A6NM;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -322,12 +522,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -367,8 +568,9 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = NAYF92A6NM;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -380,11 +582,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -397,7 +600,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = NAYF92A6NM;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -412,9 +616,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = sharann.Planner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -425,7 +628,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = NAYF92A6NM;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -440,9 +644,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = sharann.Planner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -452,15 +655,15 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = NAYF92A6NM;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = sharann.PlannerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Planner.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Planner";
 			};
 			name = Debug;
@@ -471,15 +674,15 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = NAYF92A6NM;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = sharann.PlannerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Planner.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Planner";
 			};
 			name = Release;
@@ -489,14 +692,14 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = NAYF92A6NM;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = sharann.PlannerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Planner;
 			};
 			name = Debug;
@@ -506,14 +709,14 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = NAYF92A6NM;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = sharann.PlannerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Planner;
 			};
 			name = Release;
