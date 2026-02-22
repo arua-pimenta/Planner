@@ -106,11 +106,15 @@
 		};
 		437D34712E5CAE3B00D9F4FE /* PlannerTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = PlannerTests;
 			sourceTree = "<group>";
 		};
 		437D347B2E5CAE3B00D9F4FE /* PlannerUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = PlannerUITests;
 			sourceTree = "<group>";
 		};

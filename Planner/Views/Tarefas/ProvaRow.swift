@@ -71,6 +71,10 @@ struct NovaProvaSheet: View {
     @State private var tipo: TipoProva = .teorica
     @State private var disciplinaSelecionada: Disciplina? = nil
     
+    init(initialDate: Date = Date()) {
+        _dataProva = State(initialValue: initialDate)
+    }
+    
     var body: some View {
         VStack(spacing: 0) {
             Text("Nova Prova")

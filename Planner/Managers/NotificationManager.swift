@@ -57,7 +57,7 @@ class NotificationManager: ObservableObject {
         cancelNotification(for: provaId.uuidString)
         
         // Alerta na noite anterior (20h)
-        var components = Calendar.current.dateComponents([.year, .month, .day], from: date)
+        let components = Calendar.current.dateComponents([.year, .month, .day], from: date)
         guard let diaAnterior = Calendar.current.date(byAdding: .day, value: -1, to: Calendar.current.date(from: components)!) else { return }
         
         var alertComponents = Calendar.current.dateComponents([.year, .month, .day], from: diaAnterior)

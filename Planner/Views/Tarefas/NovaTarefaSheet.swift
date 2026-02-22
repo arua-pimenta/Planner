@@ -9,7 +9,11 @@ struct NovaTarefaSheet: View {
     @State private var titulo = ""
     @State private var descricao = ""
     @State private var dataEntrega = Date()
-    @State private var disciplinaSelecionada: Disciplina? = nil
+    @State private var disciplinaSelecionada: Disciplina? = nil    
+    
+    init(initialDate: Date = Date()) {
+        _dataEntrega = State(initialValue: initialDate)
+    }
     
     var body: some View {
         VStack(spacing: 0) {

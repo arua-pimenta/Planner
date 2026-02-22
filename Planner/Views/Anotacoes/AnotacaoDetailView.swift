@@ -11,7 +11,7 @@ struct AnotacaoDetailView: View {
                 TextField("Título", text: $anotacao.titulo)
                     .font(.title)
                     .textFieldStyle(.plain)
-                    .onChange(of: anotacao.titulo) { _ in
+                    .onChange(of: anotacao.titulo) { _, _ in
                         anotacao.dataModificacao = Date()
                     }
                 
@@ -34,7 +34,7 @@ struct AnotacaoDetailView: View {
                 TextEditor(text: $anotacao.conteudo)
                     .font(.body)
                     .padding()
-                    .onChange(of: anotacao.conteudo) { _ in
+                    .onChange(of: anotacao.conteudo) { _, _ in
                         anotacao.dataModificacao = Date()
                     }
             } else {
