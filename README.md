@@ -1,4 +1,4 @@
-# 🩺 Vitas: The Specialized Medical Planner (v1.3.7)
+# 🩺 Vitas: The Specialized Medical Planner (v1.3.8)
 
 <div align="center">
   <img src="https://img.shields.io/badge/macOS-14.0+-black?style=for-the-badge&logo=apple" alt="macOS 14.0+" />
